@@ -4,10 +4,10 @@ const createError = require('http-errors');
 const dbConnect = require('./db/initDB');
 const userRouter = require('./routers/user.router');
 const conversationRouter = require('./routers/conversation.router');
+const cors = require('cors')
 
 const errStatusCode = 500;
 // init cors
-var cors = require('cors')
 app.use(cors())
 //init database
 dbConnect()
